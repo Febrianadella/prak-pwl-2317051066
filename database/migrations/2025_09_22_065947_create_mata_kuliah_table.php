@@ -14,7 +14,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mata_kuliah', function (Blueprint $table) {
-            $table->id(); // kolom id (bigint, auto increment)
+            $table->uuid('id')->primary(); // kolom id (bigint, auto increment)
             $table->string('nama_mk'); // kolom nama_mk
             $table->integer('sks'); // kolom sks
             $table->timestamps(); // kolom created_at & updated_at
